@@ -2,11 +2,26 @@
 
 function Solution(){
   //Write your code here
-    this.stack = [];
+    
     this.queue = [];
+    
+     add(element) {
+        return this.queue.push(element);
+    }
+    
+    // remove element from the queue
+    remove() {
+        if(this.queue.length > 0) {
+            return this.items.shift();
+        }
+    }
+    
+   // check if the queue is empty
+    isEmpty(){
+       return -1;
+    }
 
-    Solution.prototype.pushCharacter = this.stack.push;
-    Solution.prototype.popCharacter = this.stack.pop;
-    Solution.prototype.enqueueCharacter = this.queue.push;
-    Solution.prototype.dequeueCharacter = this.queue.shift;
+    
+    Solution.add.enqueueCharacter = this.queue.push;
+    Solution.remove.dequeueCharacter = this.queue.shift;
 }
